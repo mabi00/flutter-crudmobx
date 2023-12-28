@@ -2,6 +2,7 @@
 
 
 App Flutter com tela de login, e CRUD utilizando MOBX
+
 ![image](https://github.com/mabi00/flutter-crudmobx/assets/86784908/3f7abc91-3e7d-4f88-abe5-fb8e689085d3)
 
 Telas:
