@@ -38,12 +38,14 @@ abstract class _TaskStore with Store {
   @action
   void loadTasks() {
     final prefsFuture = SharedPreferences.getInstance();
-    prefsFuture.then((prefs) {
-      final List<String>? taskList = prefs.getStringList('tasks');
-      if (taskList != null) {
-        tasks = taskList.map((title) => Task(title)).toList().asObservable();
-      }
-    });
+    prefsFuture.then(
+      (prefs) {
+        final List<String>? taskList = prefs.getStringList('tasks');
+        if (taskList != null) {
+          tasks = taskList.map((title) => Task(title)).toList().asObservable();
+        }
+      },
+    );
   }
 
   void saveTasks() async {
